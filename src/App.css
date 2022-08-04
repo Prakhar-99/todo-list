@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.head{
+  width: 80%;
+  margin: 30px auto;
+  margin-top: 20px;
+  font-size: 22px;
+  color: rgb(119, 0, 255);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-form-cont{
+  width: 80%;
+  margin: 30px auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add-form-cont form input{
+  width: 300px;
+  height: 40px;
+  border: 2px solid black;
+  padding: 0 5px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.add-form-cont form label{
+  font-size: 17px;
+  text-transform: uppercase;
+  color: rgb(119, 0, 255);
+}
+.add-form-cont form  button{
+  border: 2px solid rgb(119, 0, 255);
+  padding: 8px 20px;
+  font-size: 16px;
+  background-color: rgb(119, 0, 255);
+  color: white;
+  border-radius: 5px;
+}
+.todo-section{
+  min-height: 74vh;
+  z-index: 99;
+  width: 80%;
+  margin: auto;
+  color: black;
+  font-size: 20px;
+}
+.todo-list-container{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.todo-card{
+  margin: 10px 40px 20px 10px;
+  min-height: 150px;
+  width: 300px; 
+  width: 300px; 
+}
+.delete-btn{
+  margin: 10px 0;
+  background-color: rgb(248, 24, 24);
+  border: 2px solid rgb(248, 24, 24);
+  padding: 5px 20px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.card-title{
+  margin: 10px 0;
+  margin-top: 2px;
+}
+.card-disc{
+  font-size: 14px;
+  margin: 10px 0;
+}
+.footer{
+  background-color: black;
+  color: white;
+  height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-bottom: 20px;
+  width: 100%;
+  z-index: -1;
 }
-
-.App-link {
-  color: #61dafb;
+.footer h1{
+  margin: 10px 0;
 }
+@media screen and (max-width:1090px) {
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .todo-list-container{
+
+    grid-template-columns: 1fr 1fr;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width:768px) {
+  .todo-card{
+    width: 250px;
+    margin: 10 3px;
+  }
+}
+@media screen and (max-width:650px) {
+  .add-form-cont form input{
+    width: 100%;
+  }
+  .todo-list-container{
+    grid-template-columns: 1fr;
+  }
+  .todo-card{
+    width: 300px;
   }
 }
